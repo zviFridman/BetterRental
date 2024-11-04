@@ -274,9 +274,11 @@ data-bs-target="#update" onclick="openModalEdit({
  </div>
 
  <!-- Buttons -->
+<%--    <asp:Button ID="btnSave" runat="server" OnClick="SaveProduct" Text="שמירה" CssClass="btn btn-primary" />--%>
+
  <div class="col-12 text-center mt-4">
-<%-- <asp:Button ID="btnSave" runat="server" Text="שמור שינויים"--%>
-<%-- CssClass="btn btn-primary me-2" OnClick="SaveProduct"/>--%>
+ <asp:Button ID="btnSave" runat="server" Text="שמור שינויים"
+      CssClass="btn btn-primary me-2" OnClick="SaveProduct"/>
  <button type="button" class="btn btn-label-secondary"
  data-bs-dismiss="modal">ביטול</button>
  </div>
