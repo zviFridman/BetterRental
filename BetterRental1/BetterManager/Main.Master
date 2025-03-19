@@ -8,7 +8,7 @@
   <meta charset="utf-8" />
  <meta     name="viewport"    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
- <title>Dashboard - Analytics | Vuexy - Bootstrap Admin Template</title>
+ <title>מערכת לניהול עסק להשכרת ציוד לאירועים</title>
 
  <meta name="description" content="" />
 
@@ -105,36 +105,36 @@
                 <div class="badge bg-primary rounded-pill ms-auto">5</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item ">
                   <a href="ProductList.aspx" class="menu-link">
                     <div >מוצרים</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="dashboards-crm.html" class="menu-link">
-                    <div data-i18n="CRM">CRM</div>
+                  <a href="OrderList.aspx" class="menu-link">
+                    <div >הזמנות</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="app-ecommerce-dashboard.html" class="menu-link">
-                    <div data-i18n="eCommerce">eCommerce</div>
+                  <a href="Customerslist.aspx" class="menu-link">
+                    <div>לקוחות</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="app-logistics-dashboard.html" class="menu-link">
-                    <div data-i18n="Logistics">Logistics</div>
+                  <a href="PayList.aspx" class="menu-link">
+                    <div>תשלומים</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="app-academy-dashboard.html" class="menu-link">
-                    <div data-i18n="Academy">Academy</div>
+                  <a href="WorkerList.aspx" class="menu-link">
+                    <div>עובדים</div>
                   </a>
                 </li>
               </ul>
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item">
+           <%-- <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
                 <div data-i18n="Layouts">Layouts</div>
@@ -142,8 +142,8 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-collapsed-menu.html" class="menu-link">
-                    <div data-i18n="Collapsed menu">Collapsed menu</div>
+                  <a href="layouts-collapsed-menu.html" class="menu-link">--%>
+   <%--                 <div data-i18n="Collapsed menu">Collapsed menu</div>
                   </a>
                 </li>
                 <li class="menu-item">
@@ -1210,7 +1210,7 @@
                 class="menu-link">
                 <i class="menu-icon tf-icons ti ti-file-description"></i>
                 <div data-i18n="Documentation">Documentation</div>
-              </a>
+              </a>--%>
             </li>
           </ul>
         </aside>

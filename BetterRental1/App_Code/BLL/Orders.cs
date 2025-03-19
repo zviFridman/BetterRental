@@ -22,12 +22,12 @@ namespace BLL
         public DateTime AddDate { get; set; }
         public string Remarks { get; set; }
         public int CompanyCode { get; set; }
-         public float SumOrder { get; set; }
+        public float SumOrder { get; set; }
 
 
         public void Save()
         {
-             OrdersDal.Save(this);
+            OrdersDal.Save(this);
         }
         public static List<Orders> GetAll()
         {

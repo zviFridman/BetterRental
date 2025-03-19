@@ -174,6 +174,20 @@
     <Compile Include="App_Code\DAL\ProductDiscontGrup.cs" />
     <Compile Include="App_Code\DbContext.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BetterManager\CustomerEdit.aspx.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\CustomerEdit.aspx.designer.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\CustomersList.aspx.cs">
+      <DependentUpon>CustomersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\CustomersList.aspx.designer.cs">
+      <DependentUpon>CustomersList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BetterManager\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,12 +202,61 @@
     <Compile Include="BetterManager\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
+    <Compile Include="BetterManager\OrderEdit.aspx.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\OrderEdit.aspx.designer.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\PayEdit.aspx.cs">
+      <DependentUpon>PayEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\PayEdit.aspx.designer.cs">
+      <DependentUpon>PayEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\PayList.aspx.cs">
+      <DependentUpon>PayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\PayList.aspx.designer.cs">
+      <DependentUpon>PayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\ProductEdit.aspx.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\ProductEdit.aspx.designer.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BetterManager\ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BetterManager\ProductList.aspx.designer.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\WorkerList.aspx.cs">
+      <DependentUpon>WorkerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\WorkerList.aspx.designer.cs">
+      <DependentUpon>WorkerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterManager\WorkersEdit.aspx.cs">
+      <DependentUpon>WorkersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterManager\WorkersEdit.aspx.designer.cs">
+      <DependentUpon>WorkersEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\CategorysController.cs" />
@@ -1451,6 +1514,8 @@
     <Content Include="BetterManager\cards-statistics.html" />
     <Content Include="BetterManager\charts-apex.html" />
     <Content Include="BetterManager\charts-chartjs.html" />
+    <Content Include="BetterManager\CustomerEdit.aspx" />
+    <Content Include="BetterManager\CustomersList.aspx" />
     <Content Include="BetterManager\dashboards-analytics.html" />
     <Content Include="BetterManager\dashboards-crm.html" />
     <Content Include="BetterManager\Default.aspx" />
@@ -1596,7 +1661,14 @@
     <Content Include="assets\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff" />
     <Content Include="assets\vendor\libs\quill\fonts\KaTeX_Typewriter-Regular.woff2" />
     <None Include="packages.config" />
+    <Content Include="BetterManager\OrderEdit.aspx" />
+    <Content Include="BetterManager\OrderList.aspx" />
+    <Content Include="BetterManager\PayEdit.aspx" />
+    <Content Include="BetterManager\PayList.aspx" />
+    <Content Include="BetterManager\ProductEdit.aspx" />
     <Content Include="BetterManager\ProductList.aspx" />
+    <Content Include="BetterManager\WorkerList.aspx" />
+    <Content Include="BetterManager\WorkersEdit.aspx" />
     <Content Include="BetterManager\x.html" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">

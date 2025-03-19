@@ -141,7 +141,7 @@ namespace DAL
         }
         public static int DeleteById(int Id)
         {
-            string Sql = $"Delete from  T_customers Where CAid = {Id}";
+            string Sql = $"Delete from  T_customers Where CUid = {Id}";
             DbContext Db = new DbContext();
             int Total = Db.ExecuteNonQuery(Sql);
             Db.Close();

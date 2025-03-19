@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BetterManager/Main.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="BetterRental1.BetterManager.ProductList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BetterManager/Main.Master" AutoEventWireup="true" CodeBehind="OrderList.aspx.cs" Inherits="BetterRental1.BetterManager.OrderList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         button.add-new {
@@ -34,7 +34,8 @@
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="py-3 mb-4"><span class="text-muted fw-light"></span> רשימת מוצרים</h4>
+      <h4 class="py-3 mb-4"><span class="text-muted fw-light"></span> רשימת הזמנות</h4>
+
 
       <!-- Product List Widget -->
 
@@ -118,8 +119,8 @@
       </div>--%>
          <!-- כפתור הוספת מוצר חדש -->
                 <div class="mb-3 text-end">
-                    <a href="ProductEdit.aspx" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> הוסף מוצר חדש
+                    <a href="OrderEdit.aspx" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> הוסף הזמנה חדשה
                     </a>
                 </div>
 
@@ -138,36 +139,43 @@
             <thead class="border-top">
               <tr>
                 <th>קוד</th>
-                <th>שם</th>                
-                <th>מחיר</th>
-                <th>תיאור</th>
-                <th>סטטוס</th> 
-                <th>מלאי</th>                
-                <th>קטגוריה</th>
-                 <th>תמונה</th> 
-                <th>הערות</th>        
+                <th>תאריך ההזמנה</th>               
+                <th>קוד לקוח</th>
+                <th>תאריך איסוף</th>
+                <th>תאריך החזרה</th>                
+                <th>סטטוס הכנה</th>
+                 <th>סטטוס כולל</th> 
+                 <th>סטטוס תשלום</th> 
+                 <th>חלוקה/איסוף עצמי</th> 
+                 <th>מקום האירוע</th> 
+                 <th>הערות</th> 
+                <th>מחיר הזמנה</th>
+                   <th>פעולות</th>
 
               </tr>
             </thead>
               <tbody>
-    <asp:Repeater ID="RptProds" runat="server">
+    <asp:Repeater ID="RptOrders" runat="server">
         <ItemTemplate>
              <tr class="odd gradeX">
-                <td><%#Eval("Pid") %></td>
-                <td><%#Eval("Pname") %></td>
-                <td><%#Eval("Pprice") %></td>
-                <td><%#Eval("Pdesc") %></td>
-                <td ><%# Convert.ToBoolean(Eval("Status")) ? "פעיל" : "לא פעיל" %></td>   
-                <td ><%#Eval("Pinventory") %></td>   
-                <td ><%#Eval("Cid") %></td>   
-                <td ><%#Eval("Picname") %></td>   
+                <td><%#Eval("Oid ") %></td>
+                <td><%#Eval("Odate") %></td>
+                <td><%#Eval("CAid") %></td>
+                <td><%#Eval("CollectionDate") %></td>
+                <td><%#Eval("ReturnDate") %></td>
+                <td ><%# Convert.ToBoolean(Eval("StatusRedy")) ? "מוכן" : "לא מוכן" %></td>   
+                <td ><%# Convert.ToBoolean(Eval("StatusOrder")) ? "פעיל" : "לא פעיל" %></td>   
+                <td ><%# Convert.ToBoolean(Eval("StatusPay")) ? "שולם" : "לא שולם" %></td>   
+                  <td ><%# Convert.ToBoolean(Eval("Collection")) ? "איסוף עצמי" : "חלוקה" %></td>   
+                <td ><%#Eval("PlaceToSend") %></td>   
+                <td ><%#Eval("SumOrder") %></td>   
                <td ><%#Eval("Remarks") %></td>
         
       
                    <td > 
-            <a href="ProductEdit.aspx?pid=<%#Eval("Pid") %>"><i class="fas fa-edit"></i></a>       
+            <a href="OrderEdit.aspx?oid=<%#Eval("Oid ") %>"><i class="fas fa-edit"></i></a>       
                        
-           <asp:LinkButton class="delete-button" ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Pid") %>' OnClick="btnDelete_Click" OnClientClick="return confirm('אתה בטוח שברצונך למחוק מוצר זה?');"> 
+           <asp:LinkButton class="delete-button" ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Oid") %>' OnClick="btnDelete_Click" OnClientClick="return confirm('אתה בטוח שברצונך למחוק הזמנה זה?');"> 
            <i class="fas fa-trash-alt"></i>
            </asp:LinkButton></td>
    
@@ -194,7 +202,5 @@
             <script src="../assets/js/app-ecommerce-product-list.js"></script>
         <!-- Main JS -->
     <script src="../assets/js/main.js">
-     
-        
     </script>
 </asp:Content>

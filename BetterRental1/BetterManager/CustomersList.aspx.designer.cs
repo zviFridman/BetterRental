@@ -11,16 +11,16 @@ namespace BetterRental1.BetterManager
 {
 
 
-    public partial class ProductList
+    public partial class CustomersList
     {
 
         /// <summary>
-        /// RptProds control.
+        /// RptCustomers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptProds;
+        protected global::System.Web.UI.WebControls.Repeater RptCustomers;
     }
 }

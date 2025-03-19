@@ -11,10 +11,16 @@ namespace Data
 {
     public class DbContext
     {
-
+        // מחרוזת חיבור למסד הנתונים
         public string Connstr { get; set; }
+
+        // אובייקט החיבור למסד הנתונים
         public SqlConnection Conn { get; set; }
+
+        // אובייקט הפקודה לביצוע שאילתות
         public SqlCommand Cmd { get; set; }
+
+        // בנאי המגדיר את החיבור למסד הנתונים
         public DbContext()
         {
             Connstr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
@@ -28,6 +34,8 @@ namespace Data
 
 
         }
+
+        // שיטה לביצוע שאילתה שאינה מחזירה נתונים (INSERT, UPDATE, DELETE)
         public int ExecuteNonQuery(string Sql, List<SqlParameter> lst=null)
         {
             int RecCount = 0;
@@ -43,7 +51,9 @@ namespace Data
             Cmd.Dispose();
              return RecCount;
 
-        }
+        }     
+
+        // שיטה לביצוע שאילתה שמחזירה נתונים כ-DataTable
         public DataTable Execute(string Sql, int CmdType=1)
         {
                 
@@ -59,6 +69,7 @@ namespace Data
             return Dt;
         }
 
+        // שיטה ליצירת רשימת פרמטרים מאובייקט
         public static List<SqlParameter> CreateParameters (object ParametersObject)
         {
             var Parameters=new List<SqlParameter>();
@@ -71,6 +82,8 @@ namespace Data
             }
             return Parameters;
         }
+
+        // שיטה לביצוע שאילתה שמחזירה ערך יחיד
         public object ExecuteScalar(string sql)
         {
             Cmd.CommandText = sql;
